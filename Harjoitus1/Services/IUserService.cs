@@ -1,0 +1,22 @@
+﻿using Harjoitus1.Models;
+
+namespace Harjoitus1.Services
+{
+    public interface IUserService
+    {
+        Task<IEnumerable<UserDTO>> GetUsersAsync();
+
+        Task <UserDTO> GetUserAsync(long id);
+
+        Task <UserDTO> GetUserAsync(User user);
+
+        Task <bool> UpdateUserAsync(User user);
+
+        Task<bool> DeleteUserAsync(long id);
+
+        Task <UserDTO> NewUserAsync(User user);
+
+
+
+    }
+}
